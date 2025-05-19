@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANTSULA DANCE 💃</title>
+    <style>
+    
+        body {
+            background: radial-gradient(circle at 10% 20%, rgb(255, 238, 165) 0%, rgb(255, 207, 102) 90%);
+            color: #333;
+            text-align: center;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color: black;
+        }
+
+        img {
+            max-width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        button {
+            display: block;
+            margin: 15px auto;
+            border: none;
+            background: linear-gradient(45deg, #f39c12, #e74c3c);
+            font-size: 20px;
+            border-radius: 8px;
+            padding: 15px 25px;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #e74c3c, #f39c12);
+            transform: scale(1.1);
+        }
+
+        .theme-button {
+            font-size: 14px;
+            background: #34495e;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .theme-button:hover {
+            background: #2c3e50;
+            transform: scale(1.1);
+        }
+
+        
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .intro-image {
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .intro-image:hover {
+            filter: contrast(80%);
+            transform: scale(1.05);
+        }
+
+        .grid {
+            margin: 15px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+        }
+
+        .grid img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .grid img:hover {
+            transform: scale(1.2);
+        }
+
+        
+        .dark {
+            background: #121212;
+            color: #ccc;
+        }
+
+        .dark .container {
+            background: #333;
+        }
+
+        .dark a {
+            color: #e74c3c;
+        }
+
+        .dark button {
+            background: linear-gradient(45deg, #2ecc71, #16a085);
+            color: white;
+        }
+
+        .dark button:hover {
+            background: linear-gradient(45deg, #16a085, #2ecc71);
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="theme-button" onclick="changeTheme()">Dark Mode</button>
+
+    <div class="container">
+        <h1>PANTSULA DANCE 💃</h1>
+        <h2>A WAY TO FEEL ALIVE AGAIN & AGAIN</h2>
+
+        <a href="https://en.wikipedia.org/wiki/Pantsula" target="_blank">
+            <img class="intro-image"
+                src="https://images.squarespace-cdn.com/content/v1/575085fa859fd016768e7b48/1491114627309-TP257LN6PRN2I9AS1KEB/Saunders_Intellectuals.jpg"
+                alt="Pantsula Dancers" />
+        </a>
+
+        <div class="grid">
+            <img src="https://cdn.24.co.za/files/Cms/General/d/8474/605712c419704092abe906b79a1207f1.png"
+                alt="Pantsula Dancer" />
+            <img src="https://lh3.googleusercontent.com/dG697TxC0_h5FPrsVL1YE0yAzH4ogKcnlvtP3jyiOlcb6aoSfSKFwivsQsLfxEfM6Q9P7iit6nGh_Ok0vGxxkeEgVb3bXP-rTg"
+                alt="Pantsula Performance" />
+            <img src="https://img.redbull.com/images/c_limit,w_1500,h_1000/f_auto,q_auto/redbullcom/2020/4/1/sohdof98r3fzs7t0cqph/explore-pantsulaart"
+                alt="Pantsula Art" />
+            <img src="https://cdn.24.co.za/files/Cms/General/d/11093/6701485b87b349f7a1a08cc2e49e2059.jpg"
+                alt="Pantsula Dance" />
+        </div>
+
+        <p>
+            Pantsula is a tradition and a highly energetic dance form that originated in the black townships of South
+            Africa
+            during the apartheid era. It developed into a form of social commentary for black South Africans and has
+            undergone
+            several transformations with the country's changing political tides.
+            <br /><br />
+            📖
+            <a href="https://en.wikipedia.org/wiki/Pantsula"><strong> Read on Wikipedia</strong></a>
+        </p>
+
+        <button onclick="learnPantsula()">Learn Pantsula</button>
+    
+
+    <footer>
+        Coded with ❤ by
+        <a href="https://www.shecodes.io/graduates/161890-refilwe-leboho" target="_blank">REFILWE LEBOHO</a>
+    </footer>
+</div>
+    <script>
+        function changeTheme() {
+            document.body.classList.toggle("dark");
+
+            let themeButton = document.querySelector(".theme-button");
+            if (document.body.classList.contains("dark")) {
+                themeButton.innerText = "Change Theme";
+            } else {
+                themeButton.innerText = "CHANGE THEME";
+            }
+        }
+
+        function learnPantsula() {
+            let answer = prompt("Do you want to learn Pantsula Dance? (Yes/No)");
+
+            if (answer.toLowerCase() === "yes") {
+                let name = prompt("Enter your name:");
+                let email = prompt("Enter your email address:");
+                alert("Thank you, " + name + "! We will forward all the details about Pantsula dance to " + email);
+            } else {
+                alert("You're welcome to come back anytime to learn Pantsula!");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
